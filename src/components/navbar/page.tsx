@@ -49,7 +49,7 @@ export default function Navbar() {
         <nav className="bg-gray-100/75  shadow text-xl z-50 font-semibold p-3 sticky top-0">
             <div className="container mx-auto flex items-center justify-between">
                 {/* LOGO */}
-                <Link href={'/'}  className="flex items-center gap-1" > <div className="bg-black text-white w-10 h-10 flex justify-center items-center rounded-md text-xl font-bold">
+                <Link href={'/'} className="flex items-center gap-1" > <div className="bg-black text-white w-10 h-10 flex justify-center items-center cursor-pointer rounded-md text-xl font-bold">
                     S
                 </div>
                     <span className="text-2xl font-semibold">ShopMart</span></Link>
@@ -59,17 +59,17 @@ export default function Navbar() {
                     <NavigationMenu>
                         <NavigationMenuList className="gap-6">
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild active={pathname.startsWith("/products")}>
+                                <NavigationMenuLink className="cursor-pointer" asChild active={pathname.startsWith("/products")}>
                                     <Link href="/products">Products</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild active={pathname.startsWith("/brands")}>
+                                <NavigationMenuLink className="cursor-pointer" asChild active={pathname.startsWith("/brands")}>
                                     <Link href="/brands">Brands</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
-                                <NavigationMenuLink asChild active={pathname.startsWith("/categories")}>
+                                <NavigationMenuLink className="cursor-pointer" asChild active={pathname.startsWith("/categories")}>
                                     <Link href="/categories">Categories</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
@@ -94,11 +94,11 @@ export default function Navbar() {
                             {session.status === "authenticated" ? (
                                 <>
                             
-                                         <Link href="/allorders">
-                                        <DropdownMenuItem>Orders</DropdownMenuItem>
+                                    <Link  href="/allorders">
+                                        <DropdownMenuItem className="cursor-pointer " >Orders</DropdownMenuItem>
                                     </Link>
 
-                                    <DropdownMenuItem
+                                    <DropdownMenuItem className="cursor-pointer"
                                         onClick={() =>
                                             signOut({
                                                 callbackUrl: "/",
@@ -110,10 +110,10 @@ export default function Navbar() {
                                 </>
                             ) : (
                                 <>
-                                    <Link href="/login">
+                                        <Link href="/login" className="cursor-pointer">
                                         <DropdownMenuItem>Login</DropdownMenuItem>
                                     </Link>
-                                    <Link href="/register">
+                                        <Link href="/register" className="cursor-pointer">
                                         <DropdownMenuItem>Register</DropdownMenuItem>
                                     </Link>
                                 </>
@@ -157,7 +157,7 @@ export default function Navbar() {
                 {/* Mobile Hamburger */}
                  <div className="md:hidden ">
                     <Sheet >
-                        <SheetTrigger>
+                        <SheetTrigger className="cursor-pointer">
                             <Menu />
                         </SheetTrigger>
 
