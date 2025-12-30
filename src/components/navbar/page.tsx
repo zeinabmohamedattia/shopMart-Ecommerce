@@ -124,7 +124,7 @@ export default function Navbar() {
                     {/* Cart */}
                     {session.status === "authenticated" && 
                         <>
-                        <div className="relative">
+                        <div className="relative cursor-pointer">
                             <Link href="/cart">
                                 <ShoppingCartIcon />
 
@@ -137,7 +137,7 @@ export default function Navbar() {
                                 </Badge>
                             </Link>
                         </div>    
-                        <div className="relative">
+                        <div className="relative cursor-pointer">
                             <Link href="/wishlist">
                                 <Heart />
                                 <Badge className="h-5 min-w-5 absolute -top-3 -end-3 rounded-full px-1 font-mono">
@@ -196,27 +196,26 @@ export default function Navbar() {
 
                                 {session.status === "authenticated" ? (
                                     <>
-                                        <Link href="/profile" className="text-lg">Profile</Link>
-                                        <Link href="/allorders" className="text-lg">Orders</Link>
+                                        <Link href="/allorders" className="text-lg cursor-pointer">Orders</Link>
 
                                         <button
                                             onClick={() => signOut({ callbackUrl: "/" })}
-                                            className="text-left text-lg text-red-600"
+                                            className="text-left text-lg cursor-pointer text-red-600"
                                         >
                                             Logout
                                         </button>
                                     </>
                                 ) : (
                                     <>
-                                        <Link href="/login" className="text-lg">Login</Link>
-                                        <Link href="/register" className="text-lg">Register</Link>
+                                        <Link href="/login" className="text-lg cursor-pointer">Login</Link>
+                                            <Link href="/register" className="text-lg cursor-pointer">Register</Link>
                                     </>
                                 )}
 
                                 {session.status === "authenticated" &&
                                     
                                     <>
-                                    <Link href="/cart" className="flex relative w-fit  items-center gap-3 text-lg">
+                                    <Link href="/cart" className="flex relative w-fit cursor-pointer items-center gap-3 text-lg">
                                         <ShoppingCartIcon />
                                         <Badge className=" size-5  absolute -top-3 -end-3 rounded-full px-1   font-mono">
                                             {isLoading ? (
@@ -227,7 +226,7 @@ export default function Navbar() {
                                         </Badge>
                                     </Link>
                                     
-                                        <Link href="/wishlist" className="lex relative w-fit  items-center gap-3 text-lg">
+                                    <Link href="/wishlist" className="lex relative w-fit  items-center gap-3 text-lg cursor-pointer">
                                             <Heart />
                                             <Badge className="h-5 min-w-5 absolute -top-3 -end-3 rounded-full px-1 font-mono">
                                             {isWishlistLoading ? (
