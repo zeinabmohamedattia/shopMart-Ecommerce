@@ -8,7 +8,8 @@ export const WishlistContext = createContext<{
     isWishlistLoading: boolean,
     setIsWishlistLoading: (value: boolean) => void,
     getWishlist:()=>void
-}>({
+}>({ 
+    
     wishlistData: null,
     setWishlistData: () => { },
     isWishlistLoading: false,
