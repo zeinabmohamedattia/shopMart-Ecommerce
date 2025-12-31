@@ -7,7 +7,7 @@ export async function checkOutAction(cartId: string, details:string,city:string,
             city,
             phone,
         }
-        const response = await fetch(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:3000`, {
+    const response = await fetch(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=${process.env.NEXT_URL}`, {
             method: "POST",
             body: JSON.stringify({ shippingAddress }),
             headers: {

@@ -7,4 +7,3 @@ export async function getUserToken() {
     const accessToken = await decode({ token: decodedToken, secret: process.env.NEXTAUTH_SECRET! })
     return accessToken?.token
 }
- 
