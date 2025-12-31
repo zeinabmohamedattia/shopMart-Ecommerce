@@ -13,7 +13,8 @@ export const WishlistContext = createContext<{
     setWishlistData: () => { },
     isWishlistLoading: false,
     setIsWishlistLoading: () => { },
-    getWishlist:()=>{}
+    getWishlist: () => { }
+    
 })
 export default function WishlistContextProvider({ children }: { children: ReactNode }) {
     const [wishlistData, setWishlistData] = useState<WishlistResponse|null>(null)
