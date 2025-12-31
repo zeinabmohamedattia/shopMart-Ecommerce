@@ -13,6 +13,7 @@ export async function checkOutAction(cartId: string, details:string,city:string,
             headers: {
                 token: token!,
                 'content-type': 'application/json'
+                
             }
         })
         const data = await response.json()
