@@ -110,11 +110,11 @@ export default function Navbar() {
                                 </>
                             ) : (
                                 <>
-                                        <Link href="/login" className="cursor-pointer">
-                                        <DropdownMenuItem>Login</DropdownMenuItem>
+                                        <Link href="/login" >
+                                            <DropdownMenuItem className="cursor-pointer">Login</DropdownMenuItem>
                                     </Link>
-                                        <Link href="/register" className="cursor-pointer">
-                                        <DropdownMenuItem>Register</DropdownMenuItem>
+                                        <Link href="/register" >
+                                            <DropdownMenuItem className="cursor-pointer">Register</DropdownMenuItem>
                                     </Link>
                                 </>
                             )}
