@@ -15,7 +15,8 @@ export const CartContext = createContext<{
     setIsLoading: () => { },
     getCart:()=>{}
 })
-export default function CartContextProvider({ children }: { children: ReactNode }) {
+export default function CartContextProvider({ children }: { children: ReactNode }) { 
+    
     const [cartData, setCartData] = useState<CartResponse|null>(null)
     const [isLoading, setIsLoading] = useState(false)
     async function getCart() {
